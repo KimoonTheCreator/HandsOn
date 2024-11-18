@@ -20,4 +20,4 @@ public class Collecter : MonoBehaviour
             target.transform.position = temp;
     }
  }
-}//class
+}
