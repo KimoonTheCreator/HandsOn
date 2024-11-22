@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Player : MonoBehaviour
 
     private bool isGrounded = false; // Menentukan apakah pemain sedang di tanah
     private int jumpCount = 0;       // Menghitung jumlah lompatan (maksimal 2)
-    private Vector2 velocity;
+    public Vector2 velocity;
 
     void Start()
     {
@@ -68,5 +69,54 @@ public class Player : MonoBehaviour
         {
             isGrounded = false; // Pemain tidak di tanah
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("I touched it!");
+            Vector2 collisionNormal = collision.contacts[0].normal;
+
+            if (isCollisionFromTop(collisionNormal))
+            {
+                Debug.Log("Top"); // Pemain diatas dinding
+            }
+
+            else 
+            {
+                Debug.Log("Death, Press R to Restart"); 
+                Time.timeScale = 0f; //Game berhenti
+                EnableRestart(); //Game dapat direstart
+            }
+
+        }
+    }
+    private bool isCollisionFromTop(Vector2 collisionNormal)
+    {
+        return collisionNormal.y > 0.5f;
+    }
+
+    private void EnableRestart() //Placeholder death mechanism
+    {
+        StartCoroutine(CheckForRestart()); //Cek apakah R dipencet
+    }
+
+    private System.Collections.IEnumerator CheckForRestart()
+    {
+        while (!Input.GetKeyDown(KeyCode.R)) //Menunggu input key R
+        {
+            yield return null; 
+        }
+
+        RestartGame();
+    }
+
+    // Fungsi reset sementara
+    private void RestartGame() //Placeholder death mechanism
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
