@@ -638,9 +638,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2120548144}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
-        m_MethodName: ChangeMasterVolume
+      - m_Target: {fileID: 2120548143}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeMasterVol
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1164,9 +1164,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2120548144}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
-        m_MethodName: ChangeSFXVolume
+      - m_Target: {fileID: 2120548143}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeSFXVol
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1341,9 +1341,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2120548144}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
-        m_MethodName: ChangeBGMVolume
+      - m_Target: {fileID: 2120548143}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeBGMVol
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2694,9 +2694,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2120548144}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
-        m_MethodName: changeGraphicsQuality
+      - m_Target: {fileID: 2120548143}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: ChangeGraphicQuality
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3570,7 +3570,7 @@ GameObject:
   - component: {fileID: 1505477634}
   - component: {fileID: 1505477633}
   m_Layer: 0
-  m_Name: Background (1)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4666,7 +4666,6 @@ GameObject:
   - component: {fileID: 2120548141}
   - component: {fileID: 2120548140}
   - component: {fileID: 2120548143}
-  - component: {fileID: 2120548144}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -4776,26 +4775,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2120548138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d24a8e327e11b4283a085b1983101a, type: 3}
+  m_Script: {fileID: 11500000, guid: 483898fe404cffb48b42efb014fa9fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2120548144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120548138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60eb7694eae0bac48ad6bd5a722e4aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphicsDropdown: {fileID: 1144131030}
+  GraphicsDropdown: {fileID: 1144131030}
   SliderMaster: {fileID: 211854290}
   SliderBGM: {fileID: 515218995}
   SliderSFX: {fileID: 455338407}
-  Master: {fileID: 24100000, guid: 3c1ba463b3a4f2049bff9d801c343d24, type: 2}
+  Sound: {fileID: 24100000, guid: 3c1ba463b3a4f2049bff9d801c343d24, type: 2}
 --- !u!1 &2128862880
 GameObject:
   m_ObjectHideFlags: 0
