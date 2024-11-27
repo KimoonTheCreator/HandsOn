@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 176654910357460575}
   - component: {fileID: -6775496687652264613}
   m_Layer: 7
-  m_Name: Dindin
+  m_Name: Dinding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
