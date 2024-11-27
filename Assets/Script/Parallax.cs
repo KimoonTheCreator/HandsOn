@@ -10,8 +10,18 @@ public class Parallax : MonoBehaviour{
     // Start is called before the first frame update
     private void Start()
     {
-       cameraTransform = Camera.main.transform;
-       lastCameraPosition = cameraTransform.position; 
+        Camera foundCamera = FindObjectOfType<Camera>();
+    if (foundCamera != null)
+    {
+        Debug.Log("Found Camera: " + foundCamera.name);
+    }
+    else
+    {
+        Debug.LogError("No Camera found in the scene!");
+    }
+
+        cameraTransform = FindObjectOfType<Camera>().transform;
+        lastCameraPosition = cameraTransform.position; 
     }
 
     // Update is called once per frame
