@@ -4715,11 +4715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60eb7694eae0bac48ad6bd5a722e4aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graphicsDropdown: {fileID: 1144131030}
-  SliderMaster: {fileID: 211854290}
-  SliderBGM: {fileID: 515218995}
-  SliderSFX: {fileID: 455338407}
-  Master: {fileID: 24100000, guid: 3c1ba463b3a4f2049bff9d801c343d24, type: 2}
 --- !u!1 &2128862880
 GameObject:
   m_ObjectHideFlags: 0
