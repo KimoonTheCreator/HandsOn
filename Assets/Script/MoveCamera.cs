@@ -9,9 +9,9 @@ public class MoveCamera : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {Vector3 temp = transform.position;
+    {
+    Vector3 temp = transform.position;
     temp.x += speed * Time.deltaTime;
     transform.position = temp;
-        
     }
 }
