@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Tambahkan namespace untuk SceneManager
+using UnityEngine.SceneManagement; // Untuk
 
 public class Player : MonoBehaviour
 {
@@ -52,47 +52,10 @@ public class Player : MonoBehaviour
         // Periksa apakah pemain menabrak obstacle
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("I touched it!");
-            Vector2 collisionNormal = collision.contacts[0].normal;
-
-            if (isCollisionFromTop(collisionNormal))
-            {
-                Debug.Log("Top"); // Pemain di atas dinding
-            }
-            else
-            {
-                Debug.Log("Death, Press R to Restart");
-                Time.timeScale = 0f; // Game berhenti
-                EnableRestart(); // Game dapat direstart
-            }
+        
+            Debug.Log("Death, Press R to Restart");
+            Time.timeScale = 0f;
+        
         }
-    }
-
-    private bool isCollisionFromTop(Vector2 collisionNormal)
-    {
-        return collisionNormal.y > 0.5f;
-    }
-
-    private void EnableRestart() // Placeholder death mechanism
-    {
-        StartCoroutine(CheckForRestart()); // Cek apakah R dipencet
-    }
-
-    private System.Collections.IEnumerator CheckForRestart()
-    {
-        while (!Input.GetKeyDown(KeyCode.R)) // Menunggu input key R
-        {
-            yield return null;
-        }
-
-        RestartGame();
-    }
-
-    // Fungsi reset sementara
-    private void RestartGame() // Placeholder death mechanism
-    {
-        Time.timeScale = 1f;
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
