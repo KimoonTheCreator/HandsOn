@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
         {
         
             Debug.Log("Death, Press R to Restart");
-            Time.timeScale = 0f;
+            SceneManager.LoadSceneAsync(2);
         
         }
     }
