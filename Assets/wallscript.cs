@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wallscript : MonoBehaviour
+public class wallscript : MonoBehaviour //script assigned to wall prefab
 {
     public float moveSpeed = 3f;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class wallscript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Killer")) 
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //wall prefab self destructs in collision with game object tagged 'killer' behind the scene as level slides behind the player
         }
     }
 }
